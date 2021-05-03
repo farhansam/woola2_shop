@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Nunito', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap) ;
+}
+
+p, div {
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+}
+
+h1, h2, h3, h4, h4, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar-custom {
+    background-color: rgb(245,242,242);
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 2em;
+}
+
+.hb-align {
+    margin-right: 70px;
+}
+
+.banner {
+    text-align: center;
+    margin: 5vw;
+    margin-bottom: 5em;
+}
+
+.description {
+    text-align: center;
+    color: rgb(158,111,85);
+}
+
+.para-top {
+    margin: 0;
+    font-size: larger;
+}
+
+.para-mid {
+    font-size:larger;
+}
+
+.para-last {
+    margin-bottom: 4em;
+    font-size: larger;
+}
+
+.title-space {
+    margin-bottom: 1.5em;
+}
+
+.container-content{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.image-center {
+    text-align: center;
+}
+
+.container-custom{
+    background-color: rgb(249,249,249);
+    padding: 35px;
+    margin-bottom: 5em;
+    color: rgb(158,111,85);
+}
+
+.container-custom2{
+    padding: 35px;
+    margin-bottom: 5em;
+    color: rgb(158,111,85);
+}
+
+.btn-custom {
+    background-color: rgb(230,203,199);
+    border-color: rgb(230,203,199);
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+.btn-custom a {
+    color: rgba(0,0,0,0.5);
+}
+
+.btn-custom:hover, .btn-custom a:hover {
+    color: rgba(0,0,0,0.5);
+    background-color: rgb(210,183,170);
+    border-color: rgb(210,183,170);
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: 200px;
+    width: 100vw;
+    height: 130px;
+    background-color: rgb(245,242,242);
+    padding-top: 10px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.footer-text {
+    margin-top: 10px;
+}
+
+.form {
+    width: 75vw;
+    margin: auto;
+    font-family: 'Nunito', sans-serif;
+}

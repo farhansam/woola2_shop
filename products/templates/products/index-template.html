@@ -1,0 +1,213 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/logo.png" type="image/gif" sizes="16x16">
+    <title>Collection</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+      <a class="navbar-brand active hb-align" href="index.html">
+        <img
+          src="image/logo.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt="Logo"
+          loading="lazy"
+        />
+        woola woola
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="story.html">THE STORY</a>
+          <a class="nav-link">OUR COLLECTIONS <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="contact.html">CONTACT US</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Classic -->
+    <div class="container container-custom">
+      <div class="row">
+        <div class="col-md-8 image-center">
+          <div id="carousel-classic" class="carousel slide container-content" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/classic/classic1.png" class="d-block w-100" alt="Classic 1">
+              </div>
+              <div class="carousel-item">
+                <img src="image/classic/classic2.png" class="d-block w-100" alt="Classic 2">
+              </div>
+              <div class="carousel-item">
+                <img src="image/classic/classic3.png" class="d-block w-100" alt="Classic 3">
+              </div>
+              <div class="carousel-item">
+                <img src="image/classic/classic4.png" class="d-block w-100" alt="Classic 4">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-classic" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-classic" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 container-content">
+          <h1 class="title-space">The Classic</h1>
+          <p class="para-last">The original bestseller. Our Classic range brings you back in time to an earlier period, yet gives you an elegant look that is suitable for any occasion and fashion. Combines well with modern wear, to give a classy look.</p>
+          <p class="para-mid">Available as dangles.</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Knotting -->
+     <div class="container container-custom2">
+      <div class="row">
+        <div class="col-md-8 image-center">
+          <div id="carousel-knotting" class="carousel slide container-content" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/knotting/knotting1.png" class="d-block w-100" alt="Knotting 1">
+              </div>
+              <div class="carousel-item">
+                <img src="image/knotting/knotting2.png" class="d-block w-100" alt="Knotting 2">
+              </div>
+              <div class="carousel-item">
+                <img src="image/knotting/knotting3.png" class="d-block w-100" alt="Knotting 3">
+              </div>
+              <div class="carousel-item">
+                <img src="image/knotting/knotting4.png" class="d-block w-100" alt="Knotting 4">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-knotting" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-knotting" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 container-content">
+          <h1 class="title-space">Knotting</h1>
+          <p class="para-last">Hand made to perfection, the Knotting Collection is an artwork of fine form. It is a blend of traditional fashion with a zest of chic. A hot favourite during Chinese New Year season and suitable to be worn with traditional costumes.</p>
+          <p class="para-mid">Available as studs, dangles or hoops.</p>
+        </div>
+      </div>
+    </div>
+
+       <!-- Stone -->
+       <div class="container container-custom">
+        <div class="row">
+          <div class="col-md-8 image-center">
+            <div id="carousel-stone" class="carousel slide container-content" data-ride="carousel" data-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="image/stone/stone1.png" class="d-block w-100" alt="Stone 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/stone/stone2.png" class="d-block w-100" alt="Stone 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/stone/stone3.png" class="d-block w-100" alt="Stone 3">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/stone/stone4.png" class="d-block w-100" alt="Stone 4">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousel-stone" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-stone" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 container-content">
+            <h1 class="title-space">Stone</h1>
+            <p class="para-last">The Stone range embodies nature in art. Obtained from natural sources, the stones are metamorphic in nature and are carefully polished for extra resistance against humidity and moist. </p>
+            <p class="para-mid">Available as dangles and hoops.</p>
+          </div>
+        </div>
+      </div>
+
+       <!-- Bubbly -->
+       <div class="container container-custom2">
+        <div class="row">
+          <div class="col-md-8 image-center">
+            <div id="carousel-bubbly" class="carousel slide container-content" data-ride="carousel" data-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="image/bubbly/bubbly1.png" class="d-block w-100" alt="Bubbly 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/bubbly/bubbly2.png" class="d-block w-100" alt="Bubbly 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="image/bubbly/bubbly3.png" class="d-block w-100" alt="Bubbly 3">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousel-bubbly" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-bubbly" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 container-content">
+            <h1 class="title-space">Bubbly</h1>
+            <p class="para-last">The latest range in our whole collection. As the name implies, Bubbly is suitable for those with a bubbly and carefree personality. </p>
+            <p class="para-mid">Limited availability.</p>
+          </div>
+        </div>
+      </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <h6>CONTACT US</h6>
+      <a href="https://www.facebook.com/woolawoola.sg">
+        <img src="image/facebook.png" height="45" width="45" alt="FB link">
+      </a>
+      <a href="https://www.instagram.com/woola.woola/">
+        <img src="image/instagram.png" height="35" width="65" alt="IG link">
+      </a>
+      <p class="footer-text">&#169; 2020, Woola Woola. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
