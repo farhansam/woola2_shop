@@ -195,6 +195,12 @@
         </div>
       </div>
 
+      <ul>
+        {%for product in all_products %}
+        <li>{{product.name}}</li>
+        {%endfor%}
+    </ul>
+
   <!-- Footer -->
   <footer>
     <div class="footer">
