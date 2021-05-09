@@ -161,6 +161,7 @@
 <ul>
     {%for product in all_products %}
     <li>{{product.name}}</li>
+    <li><img src="{{product.image.cdn_url}}"/></li>
     {%endfor%}
 </ul>
 
