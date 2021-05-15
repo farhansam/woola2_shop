@@ -1,5 +1,6 @@
 from django.db import models
 from pyuploadcare.dj.models import ImageField
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Collection(models.Model):
@@ -21,6 +22,7 @@ class Earring(models.Model):
     stock = models.IntegerField(blank=False)
     collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
+    creator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     image = ImageField(blank=True, manual_crop="")
 
     def __str__(self):

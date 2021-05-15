@@ -1,15 +1,35 @@
 from django.shortcuts import render, HttpResponse, redirect, reverse, get_object_or_404
-from .models import Earring
-from .forms import EarringForm
+from .models import Earring, Collection
+from .forms import EarringForm, SearchForm
 from django.contrib import messages
+from django.db.models import Q
 
 # Create your views here.
 
 
 def index(request):
-    all_earrings = Earring.objects.all()
+    earrings = Earring.objects.all()
+
+    if request.GET:
+        queries = ~Q(pk__in=[])
+
+        if 'name' in request.GET and request.GET['name']:
+            name = request.GET['name']
+            queries = queries & Q(name__icontains=name)
+
+        if 'collection' in request.GET and request.GET['collection']:
+            print("adding collection")
+            collection = request.GET['collection']
+            queries = queries & Q(collection__in=collection)
+
+        earrings = earrings.filter(queries)
+
+    collections = Collection.objects.all()
+    search_form = SearchForm(request.GET)
     return render(request, "earrings/index-template.html", {
-        'all_earrings': all_earrings
+        'earrings': earrings,
+        'collections': collections,
+        'search_form': search_form
     })
 
 
