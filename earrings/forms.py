@@ -1,8 +1,8 @@
 from django import forms
-from .models import Product
+from .models import Earring
 
 
-class ProductForm(forms.ModelForm):
+class EarringForm(forms.ModelForm):
     class Meta:
-        model = Product
+        model = Earring
         fields = ('name', 'description', 'price', 'stock', 'collection', 'tags', 'image')

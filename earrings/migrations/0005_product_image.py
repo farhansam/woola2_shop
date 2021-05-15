@@ -7,12 +7,12 @@ import pyuploadcare.dj.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0004_auto_20210509_0502'),
+        ('earrings', '0004_auto_20210509_0502'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='product',
+            model_name='earring',
             name='image',
             field=pyuploadcare.dj.models.ImageField(blank=True),
         ),

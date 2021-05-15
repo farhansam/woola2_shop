@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0002_auto_20210509_0349'),
+        ('earrings', '0002_auto_20210509_0349'),
     ]
 
     operations = [
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             new_name='Collection',
         ),
         migrations.RenameField(
-            model_name='product',
+            model_name='earring',
             old_name='collections',
             new_name='collection',
         ),

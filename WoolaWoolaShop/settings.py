@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'pyuploadcare.dj',
-    'products',
+    'earrings',
 ]
 
 MIDDLEWARE = [

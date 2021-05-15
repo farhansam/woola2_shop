@@ -14,7 +14,7 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
-class Product(models.Model):
+class Earring(models.Model):
     name = models.CharField(blank=False, max_length=255)
     description = models.TextField(blank=False)
     price = models.IntegerField(blank=False)

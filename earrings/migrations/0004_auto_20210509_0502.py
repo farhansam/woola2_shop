@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0003_auto_20210509_0351'),
+        ('earrings', '0003_auto_20210509_0351'),
     ]
 
     operations = [
@@ -18,8 +18,8 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.AddField(
-            model_name='product',
+            model_name='earring',
             name='tags',
-            field=models.ManyToManyField(to='products.Tag'),
+            field=models.ManyToManyField(to='earrings.Tag'),
         ),
     ]
