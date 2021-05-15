@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect, reverse, get_object_or_404
 from .models import Earring
 from .forms import EarringForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -18,6 +19,7 @@ def create_earring(request):
 
         if create_form.is_valid():
             create_form.save()
+            messages.success(request, f"New book {create_form.cleaned_data['name']} has been created")
             return redirect(reverse(index))
         else:
             return render(request, 'earrings/create-template.html', {

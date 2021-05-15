@@ -51,10 +51,19 @@
     </nav>
 
     <div class="container">
+      {% if messages %}  
+        <div class='alert alert-success'>    
+              {% for message in messages %} <p>{{ message }}</p> {% endfor %}
+            
+        </div>
+       {% endif %}
+
+    <div class="container">
     {%block content%}{%endblock%}
     </div>
 
     {%block js %}{%endblock%}
+    
 
     <!-- Footer -->
     <footer>
