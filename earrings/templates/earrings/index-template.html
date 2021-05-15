@@ -160,7 +160,7 @@
 
 <ul>
     {%for earring in all_earrings %}
-    <li>{{earring.name}}</li>
+    <li>{{earring.name}}<a href="{% url 'update_earring_route' earring_id=earring.id %}">Edit</a></li>
     <li><img src="{{earring.image.cdn_url}}"/></li>
     {%endfor%}
 </ul>
