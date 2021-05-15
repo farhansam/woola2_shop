@@ -48,3 +48,14 @@ def update_earring(request, earring_id):
         return render(request, 'earrings/update-template.html', {
             'form': update_form
         })
+
+
+def delete_earring(request, earring_id):
+    earring_to_delete = get_object_or_404(Earring, pk=earring_id)
+    if request.method == 'POST':
+        earring_to_delete.delete()
+        return redirect(index)
+    else:
+        return render(request, 'earrings/delete-template.html', {
+            "earring": earring_to_delete
+        })
