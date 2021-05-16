@@ -1,0 +1,15 @@
+{% extends 'base-template.html' %}
+{%load static %}
+{%load crispy_forms_tags %}
+
+{%block content %}
+<h1>Your Cart</h1>
+<ul>
+    {%for key, i in shopping_cart.items %}
+        <li>
+            {{i.name}}<br/>
+            ${{i.price}}
+        </li>
+    {%endfor%}
+</ul>
+{%endblock %}

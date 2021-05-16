@@ -26,7 +26,7 @@ def index(request):
 
     collections = Collection.objects.all()
     search_form = SearchForm(request.GET)
-    return render(request, "earrings/index-template.html", {
+    return render(request, 'earrings/index-template.html', {
         'earrings': earrings,
         'collections': collections,
         'search_form': search_form
