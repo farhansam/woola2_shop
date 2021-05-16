@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import earrings.views
 
 urlpatterns = [
+    path('', earrings.views.home, name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('earrings/', include('earrings.urls')),

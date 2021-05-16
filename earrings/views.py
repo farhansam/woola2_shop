@@ -7,6 +7,10 @@ from django.db.models import Q
 # Create your views here.
 
 
+def home(request):
+    return render(request, 'earrings/home-template.html')
+
+
 def index(request):
     earrings = Earring.objects.all()
 
