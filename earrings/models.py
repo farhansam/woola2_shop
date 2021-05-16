@@ -18,7 +18,7 @@ class Tag(models.Model):
 class Earring(models.Model):
     name = models.CharField(blank=False, max_length=255)
     description = models.TextField(blank=False)
-    price = models.IntegerField(blank=False)
+    price = models.DecimalField(max_digits=10, decimal_places=3,blank=False)
     stock = models.IntegerField(blank=False)
     collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)

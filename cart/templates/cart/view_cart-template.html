@@ -8,7 +8,8 @@
     {%for key, i in shopping_cart.items %}
         <li>
             {{i.name}}<br/>
-            ${{i.price}}
+            ${{i.price}}<br/>
+            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' earring_id=i.id %}">Remove</a>
         </li>
     {%endfor%}
 </ul>
