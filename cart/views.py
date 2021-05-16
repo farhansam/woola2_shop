@@ -12,7 +12,7 @@ def add_to_cart(request, earring_id):
         cart[earring_id] = {
             'id': earring_id,
             'name': earring.name,
-            'price': earring.price,
+            'price': float(earring.price),
             'qty': 1
         } 
         
@@ -42,4 +42,14 @@ def remove_from_cart(request, earring_id):
         request.session['shopping_cart'] = cart
         messages.success(request, "Item removed from cart!")
         
-    return redirect(reverse('view_cart'))
+    return redirect(reverse('view_cart_route'))
+
+
+def update_quantity(request, earring_id):
+    cart = request.session.get('shopping_cart', {})
+    if earring_id in cart:
+        cart[earring_id]['qty'] = request.POST['qty']
+        request.session['shopping_cart'] = cart
+        messages.success(request, f"Quantity for {cart[earring_id]['name']} has been changed")
+    
+    return redirect(reverse('view_cart_route'))

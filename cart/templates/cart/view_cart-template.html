@@ -6,11 +6,16 @@
 <h1>Your Cart</h1>
 <ul>
     {%for key, i in shopping_cart.items %}
-        <li>
-            {{i.name}}<br/>
-            ${{i.price}}<br/>
-            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' earring_id=i.id %}">Remove</a>
-        </li>
+    <li>
+        {{i.name}}<br />
+        <form method="POST" action="{% url 'update_quantity_route' earring_id=i.id %}">
+            {%csrf_token%}
+            Quantity:<input name="qty" type="text" value="{{i.qty}}" style="width:20px">
+            <input type="submit" class="btn btn-primary btn-sm" value="Update Quantity" />
+        </form>
+        ${{i.price}}<br />
+        <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart_route' earring_id=i.id %}">Remove</a>
+    </li>
     {%endfor%}
 </ul>
 {%endblock %}

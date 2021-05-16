@@ -47,6 +47,7 @@
           <a class="nav-link" href="story.html">THE STORY</a>
           <a class="nav-link" href="collections.html">OUR COLLECTIONS</a>
           <a class="nav-link" href="contact.html">CONTACT US</a>
+          <a href="{% url 'view_cart_route' %}">Shopping Cart ({{number_of_items}})</a>
         </div>
       </div>
     </nav>
@@ -60,6 +61,7 @@
        {% endif %}
 
     <div class="container">
+        
     {%block content%}{%endblock%}
     </div>
 
