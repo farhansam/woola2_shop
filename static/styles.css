@@ -18,8 +18,8 @@ h1, h2, h3, h4, h4, h6 {
     margin-bottom: 2em;
 }
 
-.hb-align {
-    margin-right: 70px;
+.align-right {
+    text-align: right;
 }
 
 .banner {
