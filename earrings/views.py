@@ -39,7 +39,7 @@ def create_earring(request):
 
         if create_form.is_valid():
             create_form.save()
-            messages.success(request, f"New book {create_form.cleaned_data['name']} has been created")
+            messages.success(request, f"New earring {create_form.cleaned_data['name']} has been created")
             return redirect(reverse(index))
         else:
             return render(request, 'earrings/create-template.html', {

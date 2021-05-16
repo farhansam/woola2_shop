@@ -1,8 +1,10 @@
 from django import forms
 from .models import Earring, Collection
+from pyuploadcare.dj.forms import ImageField
 
 
 class EarringForm(forms.ModelForm):
+    image = ImageField(label='Image', required=False)
     class Meta:
         model = Earring
         fields = ('name', 'description', 'price', 'stock', 'collection', 'tags', 'creator', 'image')
