@@ -11,6 +11,14 @@ def home(request):
     return render(request, 'earrings/home-template.html')
 
 
+def story(request):
+    return render(request, 'earrings/story-template.html')
+
+
+def collections(request):
+    return render(request, 'earrings/collections-template.html')
+
+
 def index(request):
     earrings = Earring.objects.all()
 

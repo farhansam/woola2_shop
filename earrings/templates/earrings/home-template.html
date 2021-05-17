@@ -1,6 +1,5 @@
 {% extends 'base-template.html' %}
 {%load static %}
-{%load crispy_forms_tags %}
 
 {%block content%}
 
@@ -26,13 +25,13 @@
 <div class="container container-custom">
     <div class="row">
         <div class="col-lg-4 image-center">
-            <img src="" width="300" height="400" alt="story" class="container-content">
+            <img src="https://ucarecdn.com/0c650797-829d-4011-bbca-f4a024529398/storybanner.JPG" class="img-thumbnail" alt="story">
         </div>
         <div class="col-lg-8 container-content">
             <h2 class="title-space">THE STORY</h2>
             <p class="para-last">Just like you, we have an undying love for accessorized earrings and we want to share
                 it with the world.</p>
-            <a class="btn btn-primary btn-custom" href="" role="button">ABOUT US</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'story' %}" role="button">ABOUT US</a>
         </div>
     </div>
 </div>
@@ -46,11 +45,10 @@
                 We want to inspire you to be carefree. To feel what you feel everyday, to wear whatever accessories,
                 whenever you want, with no restrictions.
             </p>
-            <a class="btn btn-primary btn-custom" href="" role="button">VIEW OUR COLLECTIONS</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'collections' %}" role="button">VIEW OUR COLLECTIONS</a>
         </div>
         <div class="col-lg-4 image-center">
-            <img src="" width="300" height="300" alt="Our Collections"
-                class="container-content">
+            <img src="https://ucarecdn.com/026becdf-12a1-4ea3-92a3-55e22575f925/lavieenrose.jpg" class="img-thumbnail" alt="collections">
         </div>
     </div>
 </div>
