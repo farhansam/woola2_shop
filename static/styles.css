@@ -101,6 +101,11 @@ h1, h2, h3, h4, h4, h6 {
     margin-top: 10px;
 }
 
+.footer-logo {
+    font-size: 2em;
+    color: rgba(0,0,0,0.5);
+}
+
 .form {
     width: 75vw;
     margin: auto;
