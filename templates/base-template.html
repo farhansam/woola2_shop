@@ -38,11 +38,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'collections' %}">Collections</a>
                     </li>
+                    {% if request.user.is_authenticated  %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'show_earring_route' %}">Shop</a>
                     </li>
+                    {%endif%}
                 </ul>
                 <ul class="navbar-nav">
+                    {% if request.user.is_authenticated  %}
+                    <li class="nav-item nav-link">
+                        Welcome, {{request.user}}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">
+                            Logout
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand nav-link" href="{% url 'view_cart_route' %}">
+                            <i class="fas fa-shopping-cart"></i>
+                            ({{number_of_items}})
+                        </a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">
                             Login
@@ -53,12 +71,7 @@
                             Sign up
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="{% url 'view_cart_route' %}">
-                            <i class="fas fa-shopping-cart"></i>
-                            ({{number_of_items}})
-                        </a>
-                    </li>
+                    {%endif%}
                 </ul>
             </div>
         </div>

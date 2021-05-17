@@ -3,11 +3,6 @@
 
 {%block content%}
 
-<!-- Hero Image -->
-<div class="banner">
-    <img src="" class="img-fluid" alt="hero image">
-</div>
-
 <!-- Brand Description -->
 <div class="description">
     <p class="para-top">
@@ -21,10 +16,10 @@
     <p class="para-last">#iamwoolawoola</p>
 </div>
 
-<!-- The Story -->
+<!-- Story -->
 <div class="container container-custom">
-    <div class="row">
-        <div class="col-lg-4 image-center">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
             <img src="https://ucarecdn.com/0c650797-829d-4011-bbca-f4a024529398/storybanner.JPG" class="img-thumbnail"
                 alt="story">
         </div>
@@ -32,25 +27,45 @@
             <h2 class="title-space">THE STORY</h2>
             <p class="para-last">Just like you, we have an undying love for accessorized earrings and we want to share
                 it with the world.</p>
-            <a class="btn btn-primary btn-custom" href="{% url 'story' %}" role="button">ABOUT US</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'story' %}" role="button">About Us</a>
         </div>
     </div>
 </div>
 
-<!-- Our Collections -->
+<!-- Collections -->
 <div class="container container-custom">
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col-lg-8 container-content">
             <h2 class="title-space">OUR COLLECTIONS</h2>
             <p class="para-last">
-                We want to inspire you to be carefree. To feel what you feel everyday, to wear whatever accessories,
-                whenever you want, with no restrictions.
+                Check out our timeless pieces in this gallery.
             </p>
-            <a class="btn btn-primary btn-custom" href="{% url 'collections' %}" role="button">VIEW OUR COLLECTIONS</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'collections' %}" role="button">View Gallery</a>
         </div>
-        <div class="col-lg-4 image-center">
+        <div class="col-lg-4">
             <img src="https://ucarecdn.com/026becdf-12a1-4ea3-92a3-55e22575f925/lavieenrose.jpg" class="img-thumbnail"
                 alt="collections">
+        </div>
+    </div>
+</div>
+
+<!-- Shop -->
+<div class="container container-custom">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
+            <img src="https://ucarecdn.com/02ac2266-feb7-4f70-a517-563c78922a37/classic.JPG" class="img-thumbnail"
+                alt="story">
+        </div>
+        <div class="col-lg-8 container-content">
+            <h2 class="title-space">SHOP</h2>
+            {% if request.user.is_authenticated  %}
+            <p class="para-last">View our in-trend earrings and make your purchase through our online shop now!</p>
+            <a class="btn btn-primary btn-custom" href="{% url 'show_earring_route' %}" role="button">SHOP NOW</a>
+            {% else %}
+            <p class="para-last">Log in to your account to make a purchase. Or sign up if you do not have an account.</p>
+            <a class="btn btn-primary btn-custom" href="{% url 'account_login' %}" role="button">Login</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'account_signup' %}" role="button">Sign up</a>
+            {% endif %}
         </div>
     </div>
 </div>
