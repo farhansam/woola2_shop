@@ -47,6 +47,10 @@ h1, h2, h3, h4, h4, h6 {
     font-size: larger;
 }
 
+.image-resize {
+    max-height: 500px;
+}
+
 .title-space {
     margin-bottom: 1.5em;
 }
