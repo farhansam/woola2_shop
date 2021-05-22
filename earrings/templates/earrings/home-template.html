@@ -27,7 +27,7 @@
             <h2 class="title-space">The Story</h2>
             <p class="para-last">Just like you, we have an undying love for accessorized earrings and we want to share
                 it with the world.</p>
-            <a class="btn btn-primary btn-custom" href="{% url 'story' %}" role="button">About Us</a>
+            <a class="btn btn-lg btn-custom" href="{% url 'story' %}" role="button">About Us</a>
         </div>
     </div>
 </div>
@@ -40,7 +40,7 @@
             <p class="para-last">
                 Check out our timeless pieces in this gallery.
             </p>
-            <a class="btn btn-primary btn-custom" href="{% url 'collections' %}" role="button">View Gallery</a>
+            <a class="btn btn-lg btn-custom" href="{% url 'collections' %}" role="button">View Gallery</a>
         </div>
         <div class="col-lg-4">
             <img src="https://ucarecdn.com/026becdf-12a1-4ea3-92a3-55e22575f925/lavieenrose.jpg" class="img-thumbnail"
@@ -60,11 +60,11 @@
             <h2 class="title-space">Woola Woola Shop</h2>
             {% if request.user.is_authenticated  %}
             <p class="para-last">View our in-trend earrings and make your purchase through our online shop now!</p>
-            <a class="btn btn-primary btn-custom" href="{% url 'show_earring_route' %}" role="button">Shop Now</a>
+            <a class="btn btn-lg btn-custom" href="{% url 'show_earring_route' %}" role="button">Shop Now</a>
             {% else %}
             <p class="para-last">Log in to your account to make a purchase. Or sign up if you do not have an account.</p>
-            <a class="btn btn-primary btn-custom" href="{% url 'account_login' %}" role="button">Login</a>
-            <a class="btn btn-primary btn-custom" href="{% url 'account_signup' %}" role="button">Sign up</a>
+            <a class="btn btn-lg btn-custom" href="{% url 'account_login' %}" role="button">Login</a>
+            <a class="btn btn-lg btn-custom" href="{% url 'account_signup' %}" role="button">Sign up</a>
             {% endif %}
         </div>
     </div>
