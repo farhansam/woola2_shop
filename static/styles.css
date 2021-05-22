@@ -12,6 +12,10 @@ h1, h2, h3, h4, h4, h6 {
     font-family: 'Nunito', sans-serif;
 }
 
+.font-color {
+    color: rgb(158,111,85);
+}
+
 .navbar-custom {
     background-color: rgb(245,242,242);
     font-family: 'Nunito', sans-serif;

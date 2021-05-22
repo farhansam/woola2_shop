@@ -18,10 +18,10 @@ class Tag(models.Model):
 class Earring(models.Model):
     name = models.CharField(blank=False, max_length=255)
     description = models.TextField(blank=False)
-    price = models.DecimalField(max_digits=10, decimal_places=3,blank=False)
+    price = models.DecimalField(max_digits=10, decimal_places=2,blank=False)
     stock = models.IntegerField(blank=False)
     collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField('Tag')
     creator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     image = ImageField(blank=True, manual_crop="")
 

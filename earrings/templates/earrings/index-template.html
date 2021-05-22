@@ -4,36 +4,52 @@
 
 {%block content%}
 
-<h1>Earrings</h1>
-<form method="GET">
-    {{search_form|crispy}}
-    <input type="submit" value="Search" />
-</form>
-
-
-
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    {%for earring in earrings %}
-    <div class="col">
-        <div class="card h-100" style="width: 18rem;">
-            <div class="card-header">
-                <img src="{{earring.image.cdn_url}}" class="card-img-top img-thumbnail" alt="{{earring.name}}">
+<div class="row">
+    <div class="col-md-4">
+        <h1 class="text-center font-color">Find an Earring</h1>
+        <form method="GET" class="border border-1 rounded-3 card-body bg-light">
+            {{search_form|crispy}}
+            <input class="btn btn-primary btn-custom footer-text" type="submit" value="Search" />
+        </form>
+    </div>
+    <div class="col-md-8">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            {%for earring in earrings %}
+            <div class="col">
+                <div class="card h-100" style="width: 18rem;">
+                    <div class="card-header">
+                        <img src="{{earring.image.cdn_url}}" class="card-img-top img-thumbnail" alt="{{earring.name}}">
+                        <h5 class="card-title">{{earring.name}}</h5>
+                        <h6><i>${{earring.price}}</i></h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{earring.description}}</p>
+                        <p class="card-text">{{earring.tags.all}}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        {% if request.user.is_staff  %}
+                        <a href="{% url 'update_earring_route' earring_id=earring.id %}"
+                            class="btn btn-custom btn-primary">Edit</a>
+                        <a href="{% url 'delete_earring_route' earring_id=earring.id %}"
+                            class="btn btn-custom btn-primary">Delete</a>
+                        {% endif %}
+                        <a href="{% url 'add_to_cart_route' earring_id=earring.id %}" class="btn btn-custom btn-primary">Add to
+                            Cart</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">{{earring.name}}</h5>
-                <p class="card-text">{{earring.description}}</p>
-            </div>
-            <div class="card-footer">
-                <a href="{% url 'update_earring_route' earring_id=earring.id %}" class="btn btn-primary">Edit</a>
-                <a href="{% url 'delete_earring_route' earring_id=earring.id %}" class="btn btn-primary">Delete</a>
-                <a href="{% url 'add_to_cart_route' earring_id=earring.id %}" class="btn btn-primary">Add to
-                    Cart</a>
-            </div>
+            {%endfor%}
         </div>
     </div>
-    {%endfor%}
 </div>
+
+
+
+
+
+
+
+
 
 
 
