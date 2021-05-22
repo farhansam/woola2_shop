@@ -39,7 +39,7 @@
             ${{i.sub_total}}
         </div>
         <div class="col-1 text-center">
-            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart_route' earring_id=i.id %}">Remove</a>
+            <a class="font-color" href="{% url 'remove_from_cart_route' earring_id=i.id %}"><i class="fas fa-trash-alt"></i></a>
         </div>
     </div>
     {%endfor%}

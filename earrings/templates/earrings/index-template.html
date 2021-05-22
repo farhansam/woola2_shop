@@ -9,7 +9,7 @@
         <h1 class="text-center font-color">Find an Earring</h1>
         <form method="GET" class="border border-1 rounded-3 card-body bg-light">
             {{search_form|crispy}}
-            <input class="btn btn-primary btn-custom footer-text" type="submit" value="Search" />
+            <input class="btn btn-custom footer-text" type="submit" value="Search" />
         </form>
     </div>
     <div class="col-md-8">
@@ -29,11 +29,11 @@
                     <div class="card-footer text-center">
                         {% if request.user.is_staff  %}
                         <a href="{% url 'update_earring_route' earring_id=earring.id %}"
-                            class="btn btn-custom btn-primary">Edit</a>
+                            class="btn btn-custom">Edit</a>
                         <a href="{% url 'delete_earring_route' earring_id=earring.id %}"
-                            class="btn btn-custom btn-primary">Delete</a>
+                            class="btn btn-custom">Delete</a>
                         {% endif %}
-                        <a href="{% url 'add_to_cart_route' earring_id=earring.id %}" class="btn btn-custom btn-primary">Add to
+                        <a href="{% url 'add_to_cart_route' earring_id=earring.id %}" class="btn btn-custom">Add to
                             Cart</a>
                     </div>
                 </div>

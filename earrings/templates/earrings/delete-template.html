@@ -3,12 +3,12 @@
 {%load crispy_forms_tags %}
 
 {%block content%}
-<h1>Delete earring {{earring.name}}</h1>
+<h1>Deleting earring: {{earring.name}}</h1>
 <p>Are you sure?</p>
 <form method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes"/>
-    <a href="{% url 'show_earring_route' %}">No</a>
+    <input type="submit" value="Yes" class="btn btn-danger"/>
+    <a href="{% url 'show_earring_route' %}" class="btn btn-success">No</a>
     </form>
 
 {%endblock%}

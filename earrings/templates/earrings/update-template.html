@@ -7,10 +7,22 @@
 {%endblock%}
 
 {%block content%}
-<form method="POST">
-    {% csrf_token %}
-    {{ form|crispy}}
-    <input type="Submit" value="Update" />
-    </form>
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <h1 class="text-center">Update Item</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <input type="Submit" value="Update" class="btn btn-custom"/>
+        </form>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>
+
+
 
 {%endblock%}
