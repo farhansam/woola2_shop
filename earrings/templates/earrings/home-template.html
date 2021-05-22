@@ -24,7 +24,7 @@
                 alt="story">
         </div>
         <div class="col-lg-8 container-content">
-            <h2 class="title-space">THE STORY</h2>
+            <h2 class="title-space">The Story</h2>
             <p class="para-last">Just like you, we have an undying love for accessorized earrings and we want to share
                 it with the world.</p>
             <a class="btn btn-primary btn-custom" href="{% url 'story' %}" role="button">About Us</a>
@@ -36,7 +36,7 @@
 <div class="container container-custom">
     <div class="row align-items-center">
         <div class="col-lg-8 container-content">
-            <h2 class="title-space">OUR COLLECTIONS</h2>
+            <h2 class="title-space">Our Collections</h2>
             <p class="para-last">
                 Check out our timeless pieces in this gallery.
             </p>
@@ -57,10 +57,10 @@
                 alt="story">
         </div>
         <div class="col-lg-8 container-content">
-            <h2 class="title-space">SHOP</h2>
+            <h2 class="title-space">Woola Woola Shop</h2>
             {% if request.user.is_authenticated  %}
             <p class="para-last">View our in-trend earrings and make your purchase through our online shop now!</p>
-            <a class="btn btn-primary btn-custom" href="{% url 'show_earring_route' %}" role="button">SHOP NOW</a>
+            <a class="btn btn-primary btn-custom" href="{% url 'show_earring_route' %}" role="button">Shop Now</a>
             {% else %}
             <p class="para-last">Log in to your account to make a purchase. Or sign up if you do not have an account.</p>
             <a class="btn btn-primary btn-custom" href="{% url 'account_login' %}" role="button">Login</a>
