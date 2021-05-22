@@ -3,20 +3,46 @@
 {%load crispy_forms_tags %}
 
 {%block content %}
-<h1>Your Cart</h1>
-<ul>
+<h1 class="font-color">My Cart</h1>
+
+<div class="container border border-1 rounded-3 card-body bg-light">
+    <div class="row mb-3">
+        <div class="col-5 text-center">
+            <h5 class="font-color">Item</h5>
+        </div>
+        <div class="col-4 text-center">
+            <h5 class="font-color">Qty</h5>
+        </div>
+        <div class="col-2 text-center">
+            <h5 class="font-color">Sub-total</h5>
+        </div>
+        <div class="col-1 text-center">
+        </div>
+    </div>
+
     {%for key, i in shopping_cart.items %}
-    <li>
-        {{i.name}}<br />
-        <form method="POST" action="{% url 'update_quantity_route' earring_id=i.id %}">
-            {%csrf_token%}
-            Quantity:<input name="qty" type="text" value="{{i.qty}}" style="width:20px">
-            <input type="submit" class="btn btn-primary btn-sm" value="Update Quantity" />
-        </form>
-        ${{i.price}}<br />
-        <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart_route' earring_id=i.id %}">Remove</a>
-    </li>
+    <div class="row mb-3">
+        <div class="col-2 text-center">
+            <img src="{{i.image}}" class="card-img-top img-thumbnail" alt="{{earring.name}}">
+        </div>
+        <div class="col-3">
+            {{i.name}}
+        </div>
+        <div class="col-4 text-center">
+            <form method="POST" action="{% url 'update_quantity_route' earring_id=i.id %}">
+                {%csrf_token%}
+                <input class="text-center" name="qty" type="text" value="{{i.qty}}" style="width:50px">
+                <input type="submit" class="btn btn-custom btn-sm" value="Update" />
+            </form>
+        </div>
+        <div class="col-2 text-center">
+            ${{i.total_cost}}
+        </div>
+        <div class="col-1 text-center">
+            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart_route' earring_id=i.id %}">Remove</a>
+        </div>
+    </div>
     {%endfor%}
-</ul>
-<a href="{% url 'checkout_route' %}" class="btn btn-success mb-3">Checkout</a>
+</div>
+<a href="{% url 'checkout_route' %}" class="btn btn-custom btn-lg mt-3">Checkout</a>
 {%endblock %}

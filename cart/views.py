@@ -13,16 +13,19 @@ def add_to_cart(request, earring_id):
             'id': earring_id,
             'name': earring.name,
             'price': float(earring.price),
-            'qty': 1
+            'image': str(earring.image),
+            'qty': 1,
+            'total_cost': float(earring.price)
         } 
         
         request.session['shopping_cart'] = cart
-        
         messages.success(request, "Item has been added to your cart!")
         return redirect(reverse('show_earring_route'))
     else:
         cart[earring_id]['qty'] +=1
+        cart[earring_id]['total_cost'] = float(cart[earring_id]['qty']) * float(cart[earring_id]['price'])
         request.session['shopping_cart'] = cart
+        messages.success(request, "Item has been added to your cart!")
         return redirect(reverse('show_earring_route'))
 
 
@@ -49,6 +52,7 @@ def update_quantity(request, earring_id):
     cart = request.session.get('shopping_cart', {})
     if earring_id in cart:
         cart[earring_id]['qty'] = request.POST['qty']
+        cart[earring_id]['total_cost'] = float(cart[earring_id]['qty']) * float(cart[earring_id]['price'])
         request.session['shopping_cart'] = cart
         messages.success(request, f"Quantity for {cart[earring_id]['name']} has been changed")
     
