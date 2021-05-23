@@ -1,45 +1,100 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Full Stack Frameworks with Django - Milestone Project 4
 
-Welcome farhansam,
+![Woola2Shop](https://ucarecdn.com/6a786d4b-82c9-4405-b0e2-a50dea624958/logo.png) 
+### An ecommerce website for Woola Woola Shop
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+# Table of Contents
+1. Background
+2. Objectives
+3. Demo
+4. Adopted Technology
+5. User Stories
+6. Development
+7. Implementation
+8. Testing
+9. Deployment
+10. Acknowledgement
 
-## Gitpod Reminders
+# 1. Background
+Woola Woola is an existing small business entity founded by Jean Tan, a friend of mine. 
+It is an accessorized earrings store, which currently has social media presence as its only channel of marketing, 
+communication and business transaction. As a strategic planning for future expansion, 
+Woola Woola requires an ecommerce website to showcase its business and products and to conduct its business transactions.
+This version of the website is an improved version that was built previously for my Project 1. The link to the first version
+of the website can be found [here](https://farhansam.github.io/woolawoola/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# 2. Objectives
+* To complete Milestone Project 4 - Full Stack Frameworks with Django
+* 
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+# 3. Demo
+View the end product: [Woola2Shop](https://woola2shop.herokuapp.com/)
 
-Another blue button should appear to click: _Open Browser_.
+# 4. Adopted Technology
+* HTML/CSS for UI/UX
+* Bootstrap v5.0.x for responsiveness
+* Python/django for web framework
+* dbsqlite for database in development
+* PosgreSQL for database in deployment
+* Stackoverflow for coding tips
+* Uploadcare for hosting images
+* Fontawesome for icons
+* Stripe for payment features
+* MockFlow for wireframes
+* MS Powerpoint for wireframes
+* sqldbm for ER diagrams
+* Github for version control
+* Heroku for deployment
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# 5. User Stories
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+# 6. Development
+Wireframe for respective webpages:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# 7. Implementation
+Screenshot of actual webpages:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# 8. Testing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Test Table
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
----
+## Bug Testing
+### HTML
 
-Happy coding!
+    
+### CSS
+
+   
+### PEP8
+
+
+
+# 9. Deployment
+* Link to published website: ()
+* Link to source code: ()
+
+Github was used for version control, whereas Heroku was used for deployment.
+The deployed pages' functionality, usability, responsiveness and data management were tested 
+against the development version and both were found to match.
+
+eg. of Development version vs Deployed version
+![]()
+![]()
+
+# 10. Acknowledgement
+* Trent Global College for providing the platform for learning.
+* Code Institute for their TAs, namely:
+  * Paul Chor
+  * Ace
+* [Stackoverflow](https://stackoverflow.com/) for coding tips
+* [Bootstrap](https://getbootstrap.com/) for HTML and CSS templates.
+* [w3schools](https://www.w3schools.com/) for basic HTML/CSS/Python syntax references.
