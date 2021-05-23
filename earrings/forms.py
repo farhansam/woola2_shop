@@ -7,9 +7,11 @@ class EarringForm(forms.ModelForm):
     image = ImageField(label='Image', required=False)
     class Meta:
         model = Earring
-        fields = ('name', 'description', 'price', 'stock', 'collection', 'tags', 'creator', 'image')
+        fields = ('name', 'description', 'price', 'stock', 'collection', 'tags', 
+                'creator', 'image')
 
 
 class SearchForm(forms.Form):
     name = forms.CharField(max_length=100, required=False)
-    collection = forms.ModelChoiceField(queryset=Collection.objects.all(), required=False)
+    collection = forms.ModelChoiceField(queryset=Collection.objects.all(), 
+                                        required=False)

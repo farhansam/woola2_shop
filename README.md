@@ -126,18 +126,25 @@ Screenshot of actual webpages:
 
 ## Test Table
 
-
+| Test Type | Test | Result | Error Fix |
+|:---------:|:-------------:|:-------------:|:-------------:|
+| Functionality | Test navbar links among all pages | All links work | NA |
+| Functionality | Test links on buttons in all pages | Some links do not work | Some render_template or redirect actions do not work due to missing parameters. Troubleshoot and rectified by ensuring correct parameters are passed where needed.|
+| Functionality | Test submit/search/update/delete of forms | Form submission work as expected | NA |
+| Usability | Test search engine whether string input matches value in database | Search engine works with no issues | NA |
+| Usability | Test user input validation by entering invalid condition in input field | Failed due to user able to input unacceptable data | added validation condition to prevent input of unacceptable data |
+| Responsiveness | Test responsiveness of button locations when browser is resized using Google Chrome inspect element | Buttons are able to relocate at location that is user-friendly | NA |
+| Responsiveness | Test responsiveness of images and columns using Google Chrome inspect element | Images are resized and columns are restacked | NA |
+| Data Management | Test whether data is able to be transferred to database when form is submitted  | Data transfer successful | NA |
+| Data Management | Checked data relationship by deleting data attached to foreign key | Foreign key data is also affected | NA |
 
 ## Bug Testing
-### HTML
 
+HTML files were passed through W3C Nu HTML. Major errors were rectified.
     
-### CSS
-
+CSS file was passed through Jigsaw CSS. No errors found.
    
-### PEP8
-
-
+Python file was passed through PEP8 online checker. Major errors rectified.
 
 # 9. Deployment
 * Link to published website: (https://woola2shop.herokuapp.com/)
