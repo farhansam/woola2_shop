@@ -148,7 +148,7 @@ Python file was passed through PEP8 online checker. Major errors rectified.
 
 # 9. Deployment
 * Link to published website: (https://woola2shop.herokuapp.com/)
-* Link to source code: (https://git.heroku.com/woola2shop.git)
+* Link to source code: (https://github.com/farhansam/woola2_shop)
 
 Github was used for version control, whereas Heroku was used for deployment.
 The deployed pages' functionality, usability, responsiveness and data management were tested 
