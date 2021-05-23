@@ -1,7 +1,9 @@
 from django.shortcuts import render, reverse, HttpResponse, get_object_or_404
 from earrings.models import Earring
+from checkout.models import Purchase
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
 import stripe
 import json
 
@@ -74,4 +76,31 @@ def payment_completed(request):
     return HttpResponse(status=200)
 
 
+def handle_payment(session):
+    # print(session)
+    user = get_object_or_404(User, pk=session["client_reference_id"])
 
+
+    # change the metadata from string back to array
+    all_earring_ids = session["metadata"]["all_earring_ids"].split(",")
+
+
+    # go through each earring id
+    for earring_id in all_earring_ids:
+        earring_model = get_object_or_404(Earring, pk=earring_id)
+
+        # create the purchase model
+        purchase = Purchase()
+        purchase.book_id = earring_model
+        purchase.user_id = user
+        purchase.save()
+
+
+def checkout_success(request):
+    # Empty the shopping cart
+    request.session['shopping_cart'] = {}
+    return render(request, 'checkout/success-template.html')
+
+
+def checkout_cancel(request):
+    return render(request, 'checkout/cancel-template.html')

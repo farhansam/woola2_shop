@@ -1,0 +1,21 @@
+{% extends 'base-template.html' %}
+{%load static %}
+
+{% block head_title %}Payment Cancelled{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <h1>Payment Cancelled</h1>
+
+        <p>The payment was not successful.</p>
+
+        <a href="{% url 'view_cart_route' %}" class="btn btn-custom">Return to Cart</a>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>
+
+{% endblock %}
