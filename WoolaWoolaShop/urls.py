@@ -21,6 +21,7 @@ urlpatterns = [
     path('', earrings.views.home, name='home'),
     path('story/', earrings.views.story, name='story'),
     path('collections/', earrings.views.collections, name='collections'),
+    path('restricted/', earrings.views.restricted, name='restricted'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('earrings/', include('earrings.urls')),

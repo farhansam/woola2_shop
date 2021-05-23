@@ -3,6 +3,7 @@ from .models import Earring, Collection
 from .forms import EarringForm, SearchForm
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 
@@ -19,6 +20,15 @@ def collections(request):
     return render(request, 'earrings/collections-template.html')
 
 
+def restricted(request):
+    return render(request, 'earrings/restricted-template.html')
+
+
+def allowed(user):
+    return user.is_staff
+
+
+@login_required
 def index(request):
     earrings = Earring.objects.all()
 
@@ -45,6 +55,8 @@ def index(request):
     })
 
 
+@login_required
+@user_passes_test(allowed, login_url='/restricted/')
 def create_earring(request):
     if request.method == 'POST':
         create_form = EarringForm(request.POST)
@@ -64,6 +76,8 @@ def create_earring(request):
         })
 
 
+@login_required
+@user_passes_test(allowed, login_url='/restricted/')
 def update_earring(request, earring_id):
     earring_being_updated = get_object_or_404(Earring, pk=earring_id)
 
@@ -84,6 +98,8 @@ def update_earring(request, earring_id):
         })
 
 
+@login_required
+@user_passes_test(allowed, login_url='/restricted/')
 def delete_earring(request, earring_id):
     earring_to_delete = get_object_or_404(Earring, pk=earring_id)
     if request.method == 'POST':

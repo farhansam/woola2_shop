@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from earrings.models import Earring
 
 # Create your views here.
+
+
+@login_required
 def add_to_cart(request, earring_id):
     cart = request.session.get('shopping_cart', {})
     
@@ -29,6 +32,7 @@ def add_to_cart(request, earring_id):
         return redirect(reverse('show_earring_route'))
 
 
+@login_required
 def view_cart(request):
     cart = request.session.get('shopping_cart', {})
     print(cart)
@@ -37,6 +41,7 @@ def view_cart(request):
     })
 
 
+@login_required
 def remove_from_cart(request, earring_id):
     cart = request.session.get('shopping_cart',{})
     
@@ -48,6 +53,7 @@ def remove_from_cart(request, earring_id):
     return redirect(reverse('view_cart_route'))
 
 
+@login_required
 def update_quantity(request, earring_id):
     cart = request.session.get('shopping_cart', {})
     if earring_id in cart:
